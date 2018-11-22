@@ -16,10 +16,10 @@ namespace
         if(amount > 100000000) amount = 100000000;
         else if(amount < 10) amount = 10;
 
-        aisdi::LinkedList<int> list;
-        aisdi::Vector<int> vector;
+        aisdi::LinkedList<std::string> list;
+        aisdi::Vector<std::string> vector;
 
-        int element = 12345;
+        std::string element  = "testujemy";
 
         //appending
         high_resolution_clock::time_point t1 = high_resolution_clock::now();
