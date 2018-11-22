@@ -74,9 +74,7 @@ public:
 
   LinkedList(LinkedList&& other)
   {
-     // (void) other;
-     // throw std::runtime_error("Todo");
-
+      
       list_size = other.list_size;
       first = other.first;
       last = other.last;
