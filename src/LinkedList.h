@@ -52,7 +52,6 @@ public:
 
   LinkedList(std::initializer_list<Type> l)
   {
-     // (void) l;
       startlist();
       auto i = l.begin();
       while( i != l.end() )
@@ -81,7 +80,6 @@ public:
       other.list_size = 0;
       other.first = nullptr;
       other.last = nullptr;
-
   }
 
     ~LinkedList()
@@ -222,8 +220,6 @@ public:
 
       if (isEmpty()) {if(possition==begin()) throw std::out_of_range("You want to erase begin of list");}
       if (possition==end()) {throw std::out_of_range("You want to erase end of list"); }
-//        Node* toremove;
-//        toremove=possition.current;
 
       possition.current->previous->next=possition.current->next;
       possition.current->next->previous=possition.current->previous;
@@ -235,7 +231,7 @@ public:
 
   void erase(const const_iterator& firstIncluded, const const_iterator& lastExcluded)
   {
-      // zmienić na swoje
+
       firstIncluded.current->previous->next = lastExcluded.current;
       lastExcluded.current->previous = firstIncluded.current->previous;
 
@@ -252,16 +248,6 @@ public:
           counter++;
       }
       list_size -= counter;
-/*
-      if (firstIncluded==lastExcluded) { return;}
-      //first_to_remove->previous->next=last_to_remove;
-      //last_to_remove->previous=first_to_remove->previous;
-
-      const_iterator i;
-      for (i = firstIncluded;i!=lastExcluded  ;i++ ) {
-          erase(i);
-      }
-      */
   }
 
   iterator begin()

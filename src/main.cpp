@@ -11,7 +11,6 @@ namespace
 {
     void perfomTest(size_t amount)
     {
-        //ugly, yet practical test
         using namespace std::chrono;
         if(amount > 100000000) amount = 100000000;
         else if(amount < 10) amount = 10;
@@ -44,7 +43,7 @@ namespace
                  vector_time<<" in vector"<<std::endl<<
                  list_time<<" in list"<<std::endl;
 
-        //inserting at begin
+        //inserting at possition begin +2
         t1 = high_resolution_clock::now();
         vector.insert(vector.begin()+2, element);
         t2 = high_resolution_clock::now();
@@ -61,7 +60,7 @@ namespace
                  vector_time<<" in vector"<<std::endl<<
                  list_time<<" in list"<<std::endl;
 
-        //inserting at end
+        //inserting at possition end -2
         t1 = high_resolution_clock::now();
         vector.insert(vector.end()-2, element);
         t2 = high_resolution_clock::now();

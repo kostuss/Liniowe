@@ -1,6 +1,6 @@
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
-add_executable(aisdiLinearTests test_main.cpp VectorTests.cpp LinkedListTests.cpp ) #LinkedListTests.cpp VectorTests.cpp
+add_executable(aisdiLinearTests test_main.cpp VectorTests.cpp LinkedListTests.cpp )
 target_link_libraries(aisdiLinearTests ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
 
 add_test(boostUnitTestsRun aisdiLinearTests)
